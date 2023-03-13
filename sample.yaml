@@ -12,7 +12,7 @@
   tasks:
     - name: Install the NGINX
       ansible.builtin.yum:
-        name: python3
+        name: nginx
         state: present
     - name: Start NGINX
       service:
