@@ -2,6 +2,6 @@
   host: host1,host2
   tasks:
     - name: Install the python3
-      dnf:
+      ansible.builtin.yum:
         name: python3
         state: present
