@@ -1,0 +1,7 @@
+- name: Playbook1
+  host: host1,host2
+  tasks:
+    - name: Install the python3
+      dnf:
+        name: python3
+        state: present
