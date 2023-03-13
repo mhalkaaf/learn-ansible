@@ -14,6 +14,10 @@
       ansible.builtin.yum:
         name: nginx
         state: present
+    - name: Copy file config
+      ansible.builtin.yum:
+        name: nginx
+        state: present
     - name: Start NGINX
       service:
         name: nginx
