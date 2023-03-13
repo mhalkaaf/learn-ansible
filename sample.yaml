@@ -10,3 +10,9 @@
       ansible.builtin.yum:
         name: nginx
         state: present
+
+  handlers:
+  - name: Restart Nginx
+    service:
+      name: nginx
+      state: restarted
