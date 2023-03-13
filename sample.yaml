@@ -5,15 +5,26 @@
     - name: Install the python3
       ansible.builtin.yum:
         name: python3
-        state: present
-    - name: Install NGINX
-      ansible.builtin.yum:
-        name: nginx
-        state: present
-      notify: Restart Nginx
+        state: present      
 
-  handlers:
-  - name: Restart Nginx
-    service:
-      name: nginx
-      state: restarted
+- name: Playbook2
+  hosts: host1,host2
+  tasks:
+    - name: Install the NGINX
+      ansible.builtin.yum:
+        name: python3
+        state: present
+    - name: Start NGINX
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+
+
+
+  #handlers:
+  #- name: Restart Nginx
+  #  service:
+  #    name: nginx
+  #   state: restarted
