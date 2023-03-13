@@ -6,3 +6,7 @@
       ansible.builtin.yum:
         name: python3
         state: present
+    - name: Install NGINX
+      ansible.builtin.yum:
+        name: nginx
+        state: present
