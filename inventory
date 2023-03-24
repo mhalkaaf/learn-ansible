@@ -7,8 +7,8 @@
 #// ansible_user=<USER> : Define an user that will use by Ansible controller to connect to client
 #// ansible_password=<PASS> : Define password for user that will connect by Ansible controller to connect to client
 
-host1 ansible_host=192.168.99.161 ansible-connection=ssh ansible_user=ansible ansible_password=P@ssw0rd#@! 
-host2 ansible_host=192.168.99.162 ansible-connection=ssh ansible_user=ansible ansible_password=P@ssw0rd#@! 
+host1 ansible_host=192.168.11.28 ansible-connection=ssh ansible_user=ansible ansible_password=P@ssw0rd#@! 
+host2 ansible_host=192.168.11.29 ansible-connection=ssh ansible_user=ansible ansible_password=P@ssw0rd#@! 
 
 [webservers]
 host[1:2]
