@@ -2,6 +2,10 @@
 - name: Playbook
   hosts: webserver
   tasks:
+    - name: Install the Epel Repository
+      ansible.builtin.yum:
+        name: epel-release
+        state: present 
     - name: Install the nginx
       ansible.builtin.yum:
         name: nginx
