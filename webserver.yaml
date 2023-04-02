@@ -14,3 +14,20 @@
       ansible.builtin.yum:
         name: python3
         state: present
+
+- name: Playbook for install webserver
+  hosts: all
+  tasks:
+    - name: Installing python3
+      ansible.builtin.yum:
+        name: httpd
+        state: present
+      when: ansible_os_family == "RedHat"
+
+    - name: Installing python3
+      apt:
+        name: apache2
+        state: present
+      when: ansible_os_family == "Debian"
+
+
