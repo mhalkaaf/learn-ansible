@@ -1,2 +1,8 @@
 ---
-
+- name: Playbook for install git
+  hosts: host1
+  tasks:
+    - name: Installing git
+      ansible.builtin.yum:
+        name: git
+        state: present
