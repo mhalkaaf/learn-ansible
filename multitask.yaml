@@ -10,12 +10,7 @@
       ansible.builtin.yum:
         name: nginx
         state: present  
-    - name: Install the dnsutils
-      ansible.builtin.yum:
-        name: dns-utils
-        state: present  
 
----
 - name: Playbook 2 
   hosts: ubuntu
   tasks:  
