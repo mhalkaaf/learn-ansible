@@ -1,0 +1,7 @@
+- name: Playbook for copy
+  hosts: ubuntu
+  tasks:  
+    - name: Copy file
+      copy:
+        src: ./inventory
+        dest: /etc  
