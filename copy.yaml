@@ -5,3 +5,8 @@
       copy:
         src: ./inventory
         dest: /etc  
+
+    - name: delete file
+      file:
+        path: /etc/inventory
+        state: absent
