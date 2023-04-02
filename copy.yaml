@@ -10,3 +10,8 @@
       file:
         path: /etc/inventory
         state: absent
+
+    - name: adding file
+      file:
+        path: /etc/devops.txt
+        state: touch
