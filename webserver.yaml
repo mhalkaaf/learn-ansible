@@ -6,3 +6,11 @@
       ansible.builtin.yum:
         name: git
         state: present
+
+- name: Playbook for install python3
+  hosts: host1,host3
+  tasks:
+    - name: Installing python3
+      ansible.builtin.yum:
+        name: python3
+        state: present
