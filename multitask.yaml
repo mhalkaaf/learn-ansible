@@ -1,0 +1,12 @@
+---
+- name: Playbook
+  hosts: webserver
+  tasks:
+    - name: Install the nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: present  
+    - name: Install the dnsutils
+      ansible.builtin.yum:
+        name: dns-utils
+        state: present  
