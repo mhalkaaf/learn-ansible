@@ -1,0 +1,8 @@
+---
+- name: Using separation file
+  hosts: webserver
+  tasks:
+    - name: install git
+      yum:
+        name: git
+        state: present

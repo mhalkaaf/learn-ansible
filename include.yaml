@@ -1,0 +1,4 @@
+---
+- name: using playbook for include
+  hosts: webserver
+  include: ./tasks/git.yaml
