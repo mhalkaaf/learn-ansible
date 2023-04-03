@@ -3,10 +3,24 @@
   hosts: ubuntu
   vars:
     package: apache2
-    require: "yes"
+    require: "no"
   tasks: 
     - name: Service Up
       service: 
         name: "{{ package }}"
         state: restarted
       when: require  == "yes"
+
+- name: Playbook using condition
+  hosts: ubuntu
+  tasks: 
+    - name: register stat
+      stat: 
+        path: /etc/inventory.txt
+      register: result
+    - name: Ensure apache is latest version
+      apt: 
+        name: apache2
+        state: latest
+      when: result.stat.exists
+  
