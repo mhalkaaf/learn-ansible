@@ -3,7 +3,7 @@
   hosts: ubuntu
   vars:
     package: apache2
-    require: "no"
+    require: "yes"
   tasks: 
     - name: Service Up
       service: 
