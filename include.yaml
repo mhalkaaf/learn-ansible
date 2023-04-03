@@ -2,4 +2,5 @@
 - name: using playbook for include
   hosts: webserver
   tasks:
-    include_tasks: ./tasks/git.yaml
+    - name: using include
+      include_tasks: ./tasks/git.yaml
