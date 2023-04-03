@@ -1,0 +1,9 @@
+- name: Playbook2 for centos
+  hosts: webserver
+  vars_files:
+    - myfile.vars
+  tasks:
+    - name: Installing git
+      yum:
+        name: "{{ package }}"
+        state: present

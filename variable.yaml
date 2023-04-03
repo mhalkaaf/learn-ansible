@@ -15,6 +15,8 @@
 
 - name: Playbook2 for centos
   hosts: webserver
+  vars_files:
+    - myfile.vars
   vars:
     package: nginx
   tasks:
