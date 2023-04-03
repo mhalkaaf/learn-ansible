@@ -8,7 +8,7 @@
       ansible.builtin.yum:
         name: "{{ package }}"
         state: present
-   - name: Install the apache2
+    - name: Install the apache2
       ansible.builtin.service:
         name: "{{ package }}"
         state: started
