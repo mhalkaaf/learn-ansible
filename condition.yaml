@@ -1,0 +1,12 @@
+---
+- name: Playbook using condition
+  hosts: ubuntu
+  vars:
+    package: apache2
+    require: "no"
+  tasks: 
+    - name: Service Up
+      service: 
+        name: "{{ package }}"
+        state: restarted
+      when: require  == "yes"
