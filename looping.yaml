@@ -10,3 +10,11 @@
         - python3
         - dnsutils
         - nginx
+    - name: Installing all requirement packets
+      yum: 
+        name: "{{ item }}"
+        state: present
+      loop:
+        - python3
+        - dnsutils
+        - nginx
