@@ -2,6 +2,10 @@
 - name: Playbook for handlers
   hosts: ubuntu
   tasks:
+    - name: uninstalling apache2
+      apt: 
+        name: apache2
+        state: absent
     - name: installing apache2
       apt: 
         name: apache2
@@ -9,7 +13,7 @@
       notify: 
         - Restart apache2
   handlers:
-    - name: Restart apache
+    - name: Restart apache2
       service: 
         name: apache2
-        state: started
+        state: restarted
