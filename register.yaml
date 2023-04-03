@@ -1,5 +1,6 @@
 - name: Playbook using conditionto copy us
   hosts: ubuntu
+  become: yes
   tasks: 
     - name: create file
       file: 
