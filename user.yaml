@@ -1,0 +1,7 @@
+---
+- name: playbook for creating users
+  hosts: webserver
+  tasks:
+    - name: create users
+      user:
+        name: devops
