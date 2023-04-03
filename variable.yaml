@@ -1,14 +1,32 @@
 ---
 - name: Playbook1
-  hosts: webserver
+  hosts: all
   vars:
     package: apache2
   tasks:
     - name: Install the apache2
-      ansible.builtin.yum:
+      apt:
         name: "{{ package }}"
         state: present
     - name: Install the apache2
-      ansible.builtin.service:
+      service:
+        name: "{{ package }}"
+        state: started
+
+- name: Playbook2 for centos
+  hosts: webserver
+  vars:
+    package: nginx
+  tasks:
+    - name: Install Epel Repository
+      yum:
+        name: epel-release
+        state: present
+    - name: Install NGINX
+      yum:
+        name: "{{ package }}"
+        state: present
+    - name: Starting Service
+      service:
         name: "{{ package }}"
         state: started
