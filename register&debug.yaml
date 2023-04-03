@@ -1,0 +1,10 @@
+---
+- name: playbook for debug
+  hosts: webserver
+  tasks:
+    - name: print hostname
+      command: hostname
+      register: out
+    - name : debug
+      debug: 
+        var=out.stdout_lines
