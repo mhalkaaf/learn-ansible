@@ -1,0 +1,6 @@
+- name: Playbook for facts 
+  hosts: ubuntu
+  tasks:
+    - name: debug for gather facts
+      debug:
+        var: ansible_facts
