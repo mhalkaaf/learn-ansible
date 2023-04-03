@@ -1,0 +1,9 @@
+---
+- name: Playbook for import task 
+  hosts: webserver
+  tasks:
+    - name: debug
+      debug:
+        msg: "Task1"
+    - name: import Playbook
+      import_playbook: ./tasks/gitplay.yaml

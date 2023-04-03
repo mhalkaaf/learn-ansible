@@ -1,0 +1,8 @@
+---
+- name: import Playbook
+  hosts: webserver
+  tasks: 
+    - name: install git
+      yum:
+        name: git
+        state: present
