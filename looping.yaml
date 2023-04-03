@@ -18,3 +18,12 @@
         - python3
         - dnsutils
         - nginx
+
+    - name: Uninstalling all packets using for loop
+      yum: 
+        name: "{{ item }}"
+        state: absent
+      loop:
+        - python3
+        - dnsutils
+        - nginx
