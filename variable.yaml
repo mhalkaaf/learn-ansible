@@ -6,5 +6,9 @@
   tasks:
     - name: Install the apache2
       ansible.builtin.yum:
-        name: {{ package }}
+        name: "{{ package }}"
         state: present
+   - name: Install the apache2
+      ansible.builtin.service:
+        name: "{{ package }}"
+        state: started
