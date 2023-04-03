@@ -11,6 +11,7 @@
       copy:
         src: /root/inventory.txt
         dest: /etc/inventory.txt
+      remote_src:  yes
 
     - name: check if file exists
       stat:
