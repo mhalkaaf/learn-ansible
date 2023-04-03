@@ -1,0 +1,6 @@
+---
+- name: Playbook for using role
+  hosts: all
+  roles:
+    - apache2
+    - nginx
