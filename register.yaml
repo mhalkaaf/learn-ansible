@@ -1,0 +1,23 @@
+- name: Playbook using conditionto copy us
+  hosts: ubuntu
+  tasks: 
+    - name: create file
+      file: 
+        path: /root/inventory.txt
+        state: touch
+
+    - name: copy file
+      copy:
+        src: /root/inventory.txt
+        dest: /etc/inventory.txt
+
+    - name: check if file exists
+      stat:
+        path: /etc/inventory.txt
+      register: myfile
+
+    - name: Ensure apache is latest version
+      apt: 
+        name: apache2
+        state: latest
+      when: myfile.stat.exists
