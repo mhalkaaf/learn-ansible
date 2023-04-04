@@ -1,0 +1,9 @@
+---
+- name: playbook for error handling
+  hosts: ubuntu
+  tasks:
+    - name: install apachex
+      apt: 
+        name: apachex
+        state: present 
+#      ignore_errors: true
