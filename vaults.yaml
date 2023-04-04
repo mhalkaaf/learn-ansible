@@ -1,0 +1,6 @@
+# encrypt inventory file
+ansible-vault encrypt inventory --output inventory.txt 
+# view encrypted inventory file
+ansible-vault view inventory.txt
+# edit file inside inventory encrypted fiel
+ansible-vault edit inventory.txt

@@ -1,0 +1,12 @@
+---
+- name: playbook for install
+  hosts: webserver
+  tasks:
+    - name: Uninstall awscli
+      yum:
+        name: awscli
+        state: absent
+    - name: install awscli
+      yum:
+        name: awscli
+        state: present
