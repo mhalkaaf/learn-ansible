@@ -14,3 +14,14 @@
       debug:
         msg: "{{ new_list | min }}"
     
+- name: Jinja2 Templating
+  hosts: webserver
+  vars:
+    your_name: "DevOps"
+  tasks:
+    - name: print uppercase 
+      debug:
+        msg: "{{ your_name | upper }}"
+    - name: print lowercase 
+      debug:
+        msg: "{{ your_name | lower }}"
