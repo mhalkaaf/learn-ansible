@@ -1,0 +1,13 @@
+---
+- name: Jinja2 Templating
+  hosts: localhost
+  vars:
+    new_list: 
+      - 10
+      - 30
+      - 20
+  tasks:
+    - name: find max 
+      debug:
+        msg: "{{ new_list | max }}"
+    
