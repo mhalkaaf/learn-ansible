@@ -7,3 +7,8 @@
         name: apachex
         state: present 
       ignore_errors: true
+
+    - name: error command
+      commmand: lsl
+      register: gagal
+      failed_when: gagal.rc >= 2
