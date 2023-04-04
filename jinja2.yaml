@@ -44,3 +44,13 @@
     - name: create random number
       debug:
         msg: "{{ 100 | random }}"
+
+- name: Jinja2 Templating
+  hosts: webserver
+  tasks:
+    - name: create basename 
+      debug:
+        msg: "{{ '/etc/ansible/ansible.cfg' | basename }}"
+    - name: create dirname
+      debug:
+        msg: "{{ '/etc/ansible/ansible.cfg' | dirname }}"
