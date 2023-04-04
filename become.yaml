@@ -1,0 +1,18 @@
+--- 
+- name: Playbook become
+  hosts: webserver
+  tasks:
+    - name: Create user
+      user:
+        name: autodevops1
+
+    - name: Login as Devosp
+      command: whoami
+      become: yes
+      become_user: autodevops1
+      become_method: su
+      register: out
+    
+    - name: debug
+      debug:
+        var=out.stdout_lines
