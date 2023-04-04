@@ -1,0 +1,2 @@
+docker run --rm --privileged -tid mhalkaaf/centos7:V1 /usr/sbin/init
+docker run --rm --privileged -tid mhalkaaf/ubuntu20:V1 /usr/sbin/init
