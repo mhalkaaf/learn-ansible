@@ -25,3 +25,15 @@
     - name: print lowercase 
       debug:
         msg: "{{ your_name | lower }}"
+
+- name: Jinja2 Templating
+  hosts: webserver
+  vars:
+    color: "Orange"
+  tasks:
+    - name: print uppercase 
+      debug:
+        msg: "{{ color | replace('Orange,Yellow') }}"
+    - name: print lowercase 
+      debug:
+        msg: "{{ your_name | lower }}"
