@@ -1,0 +1,10 @@
+---
+- name: playbook for delegation
+  hosts: webserver
+  tasks: 
+    - name: Run Hostname
+      command: hostname 
+      delegate_to: localhost
+      register: out
+    - debug: 
+        var=out.stdout_lines
