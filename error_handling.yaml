@@ -6,4 +6,4 @@
       apt: 
         name: apachex
         state: present 
-#      ignore_errors: true
+      ignore_errors: true
