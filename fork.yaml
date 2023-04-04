@@ -6,4 +6,9 @@
       yum:
         name: awscli
         state: present
-        
+      when: ansible_os_family == "RedHat"
+    - name: install awscli
+      apt:
+        name: awscli
+        state: present
+      when: ansible_os_family == "Debian"
