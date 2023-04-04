@@ -4,3 +4,5 @@ ansible-vault encrypt inventory --output inventory.txt
 ansible-vault view inventory.txt
 # edit file inside inventory encrypted fiel
 ansible-vault edit inventory.txt
+# Run playbook using encrypted inventory
+ansible-playbook -i inventory.txt vaultplay.yaml --ask-vault-pass
