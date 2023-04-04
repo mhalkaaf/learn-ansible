@@ -1,0 +1,17 @@
+---
+- name: Playbook for free strategy
+  hosts: webserver
+  strategy: free
+  tasks:
+    - name: Create p.txt
+      file: 
+        path: /etc/p.txt
+        state: touch
+    - name: Create q.txt
+      file: 
+        path: /etc/q.txt
+        state: touch
+    - name: Create r.txt
+      file: 
+        path: /etc/r.txt
+        state: touch
