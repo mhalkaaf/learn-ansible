@@ -1,0 +1,8 @@
+---
+- name: Playbook for async and polling
+  hosts: webserver
+  tasks:
+    - name: run sleep
+      command: sleep 60
+      async: 70
+      poll: 5
