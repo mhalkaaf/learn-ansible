@@ -10,5 +10,5 @@
 
     - name: error command
       commmand: lsl
-      register: gagal
-      failed_when: gagal.rc >= 2
+      register: diff_cmd
+      failed_when: diff_cmd.rc >= 2
