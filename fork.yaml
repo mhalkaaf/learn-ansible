@@ -1,0 +1,9 @@
+---
+- name: ansible forking
+  hosts: all
+  tasks: 
+    - name: install awscli
+      yum:
+        name: awscli
+        state: present
+        
