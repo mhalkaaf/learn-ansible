@@ -33,7 +33,7 @@
   tasks:
     - name: print uppercase 
       debug:
-        msg: "{{ color | replace('Orange,Yellow') }}"
+        msg: "{{ color | replace('Orange:Yellow') }}"
     - name: print lowercase 
       debug:
         msg: "{{ your_name | lower }}"
