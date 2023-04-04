@@ -1,0 +1,17 @@
+---
+- name: Playbook 1
+  hosts: webserver
+  strategy: linear
+  tasks:
+    - name: Create a.txt
+      file: 
+        path: /etc/a.txt
+        state: touch
+    - name: Create b.txt
+      file: 
+        path: /etc/b.txt
+        state: touch
+    - name: Create a.txt
+      file: 
+        path: /etc/b.txt
+        state: touch
