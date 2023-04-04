@@ -10,4 +10,7 @@
     - name: find max 
       debug:
         msg: "{{ new_list | max }}"
+    - name: find min 
+      debug:
+        msg: "{{ new_list | min }}"
     
